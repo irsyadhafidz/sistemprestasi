@@ -23,7 +23,6 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnDataPerlombaan = New Bunifu.Framework.UI.BunifuTileButton()
@@ -31,26 +30,9 @@ Partial Class Dashboard
         Me.btnDataPrestasi = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnDataPengguna = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'BunifuTileButton1
-        '
-        Me.BunifuTileButton1.BackColor = System.Drawing.Color.RoyalBlue
-        Me.BunifuTileButton1.color = System.Drawing.Color.RoyalBlue
-        Me.BunifuTileButton1.colorActive = System.Drawing.Color.RoyalBlue
-        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!)
-        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
-        Me.BunifuTileButton1.Image = Nothing
-        Me.BunifuTileButton1.ImagePosition = 20
-        Me.BunifuTileButton1.ImageZoom = 50
-        Me.BunifuTileButton1.LabelPosition = 41
-        Me.BunifuTileButton1.LabelText = ""
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(-1, -19)
-        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
-        Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(128, 905)
-        Me.BunifuTileButton1.TabIndex = 0
         '
         'BunifuElipse1
         '
@@ -77,7 +59,7 @@ Partial Class Dashboard
         Me.btnDataPerlombaan.ImageZoom = 50
         Me.btnDataPerlombaan.LabelPosition = 26
         Me.btnDataPerlombaan.LabelText = "Data Perlombaan"
-        Me.btnDataPerlombaan.Location = New System.Drawing.Point(-1, 177)
+        Me.btnDataPerlombaan.Location = New System.Drawing.Point(2, 176)
         Me.btnDataPerlombaan.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDataPerlombaan.Name = "btnDataPerlombaan"
         Me.btnDataPerlombaan.Size = New System.Drawing.Size(128, 118)
@@ -96,7 +78,7 @@ Partial Class Dashboard
         Me.btnDataSiswa.ImageZoom = 50
         Me.btnDataSiswa.LabelPosition = 26
         Me.btnDataSiswa.LabelText = "Data Siswa"
-        Me.btnDataSiswa.Location = New System.Drawing.Point(-1, 27)
+        Me.btnDataSiswa.Location = New System.Drawing.Point(2, 26)
         Me.btnDataSiswa.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDataSiswa.Name = "btnDataSiswa"
         Me.btnDataSiswa.Size = New System.Drawing.Size(128, 118)
@@ -115,7 +97,7 @@ Partial Class Dashboard
         Me.btnDataPrestasi.ImageZoom = 50
         Me.btnDataPrestasi.LabelPosition = 26
         Me.btnDataPrestasi.LabelText = "Data Prestasi"
-        Me.btnDataPrestasi.Location = New System.Drawing.Point(-1, 325)
+        Me.btnDataPrestasi.Location = New System.Drawing.Point(2, 324)
         Me.btnDataPrestasi.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDataPrestasi.Name = "btnDataPrestasi"
         Me.btnDataPrestasi.Size = New System.Drawing.Size(128, 118)
@@ -134,7 +116,7 @@ Partial Class Dashboard
         Me.btnDataPengguna.ImageZoom = 50
         Me.btnDataPengguna.LabelPosition = 26
         Me.btnDataPengguna.LabelText = "Data Pengguna"
-        Me.btnDataPengguna.Location = New System.Drawing.Point(-1, 470)
+        Me.btnDataPengguna.Location = New System.Drawing.Point(2, 469)
         Me.btnDataPengguna.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDataPengguna.Name = "btnDataPengguna"
         Me.btnDataPengguna.Size = New System.Drawing.Size(128, 118)
@@ -153,11 +135,24 @@ Partial Class Dashboard
         Me.btnExit.ImageZoom = 50
         Me.btnExit.LabelPosition = 26
         Me.btnExit.LabelText = "Logout"
-        Me.btnExit.Location = New System.Drawing.Point(-1, 614)
+        Me.btnExit.Location = New System.Drawing.Point(2, 613)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(6)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(128, 118)
         Me.btnExit.TabIndex = 2
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Panel2.Controls.Add(Me.btnDataPerlombaan)
+        Me.Panel2.Controls.Add(Me.btnDataSiswa)
+        Me.Panel2.Controls.Add(Me.btnExit)
+        Me.Panel2.Controls.Add(Me.btnDataPrestasi)
+        Me.Panel2.Controls.Add(Me.btnDataPengguna)
+        Me.Panel2.Location = New System.Drawing.Point(-2, -1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(131, 917)
+        Me.Panel2.TabIndex = 2
         '
         'Dashboard
         '
@@ -166,12 +161,7 @@ Partial Class Dashboard
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnDataPerlombaan)
-        Me.Controls.Add(Me.btnDataSiswa)
-        Me.Controls.Add(Me.btnDataPrestasi)
-        Me.Controls.Add(Me.btnDataPengguna)
-        Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.BunifuTileButton1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
@@ -179,11 +169,10 @@ Partial Class Dashboard
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuTileButton
@@ -191,4 +180,5 @@ Partial Class Dashboard
     Friend WithEvents btnDataPrestasi As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents btnDataPengguna As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents btnDataPerlombaan As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents Panel2 As Panel
 End Class

@@ -1,5 +1,5 @@
 ﻿Public Class Dashboard
-    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -25,6 +25,9 @@
         FormDataSiswa.MdiParent = Me
         Me.Panel1.Controls.Add(FormDataSiswa)
         FormDataSiswa.Show()
+
+
+
     End Sub
 
     Private Sub BunifuTileButton2_Click(sender As Object, e As EventArgs) Handles btnDataPerlombaan.Click
